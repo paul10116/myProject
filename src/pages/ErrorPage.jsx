@@ -5,6 +5,7 @@ const ErrorPage = () => {
     <div className="errorPage">
       <h3>Error:</h3>
       <p>page is not found!</p>
+      <h2>Cha, cha...</h2>
     </div>
   );
 };

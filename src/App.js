@@ -6,6 +6,7 @@ import Register from "./pages/Register";
 import Profile from "./pages/Profile";
 import UsersPage from "./pages/UsersPage";
 import ErrorPage from "./pages/ErrorPage";
+import SingleUserPage from "./pages/SingleUserPage";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="register" element={<Register />} />
           <Route path="profile" element={<Profile />} />
           <Route path="usersPage" element={<UsersPage />} />
+          <Route path="user/:username" element={<SingleUserPage />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
       </BrowserRouter>

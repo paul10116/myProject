@@ -67,8 +67,12 @@ const Profile = () => {
         <img src={userInfo.currentUser.image} alt="forest" />
       </div>
       <div>
-        <h5>Username: {userInfo.currentUser.username}</h5>
-        <h5>Email: {userInfo.currentUser.email}</h5>
+        <h5>
+          Username: <span> {userInfo.currentUser.username} </span>
+        </h5>
+        <h5>
+          Email: <span> {userInfo.currentUser.email} </span>
+        </h5>
         <input ref={passRef} type="text" placeholder="New password..." />
         <br />
         <input ref={imgRef} type="text" placeholder="image URL..." />

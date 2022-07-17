@@ -1,10 +1,16 @@
-import { useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux/es/exports";
+import { useSelector } from "react-redux";
+import PersonCard from "../components/PersonCard";
 
 const UsersPage = () => {
   const allUsers = useSelector((state) => state.user.value.allUsers);
 
-  return <div className="usersPage">All user's page</div>;
+  return (
+    <div className="usersPage">
+      {allUsers.map((x) => (
+        <PersonCard key={x.id} user={x} />
+      ))}
+    </div>
+  );
 };
 
 export default UsersPage;
