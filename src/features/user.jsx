@@ -11,6 +11,7 @@ export const userSlice = createSlice({
   reducers: {
     addUser: ({ value }, { payload }) => {
       const user = {
+        id: payload.id,
         username: payload.username,
         email: payload.email,
         password: payload.password,

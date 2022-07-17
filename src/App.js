@@ -23,9 +23,10 @@ function App() {
           <Route
             path="usersPage"
             element={allUsers.map((user) => (
-              <UsersPage key={user.index} user={user} />
+              <UsersPage key={user.id} user={user} />
             ))}
           />
+          <Route path="user" element={<UserProfile />} />
           <Route path="conversations" element={<Conversations />} />
         </Routes>
       </BrowserRouter>
