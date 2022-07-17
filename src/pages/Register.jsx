@@ -9,8 +9,6 @@ const Register = () => {
   const passRef = useRef();
   const confirmRef = useRef();
   const allUsers = useSelector((state) => state.user.value.allUsers);
-  const date = new Date();
-  const id = Math.floor(date.getTime() / 1000);
 
   const navigation = useNavigate();
   const dispatch = useDispatch();
@@ -21,7 +19,6 @@ const Register = () => {
     let invalid = false;
 
     const user = {
-      id: id,
       username: surnameRef.current.value,
       email: emailRef.current.value,
       password: passRef.current.value,

@@ -11,7 +11,6 @@ export const userSlice = createSlice({
   reducers: {
     addUser: ({ value }, { payload }) => {
       const user = {
-        id: payload.id,
         username: payload.username,
         email: payload.email,
         password: payload.password,
@@ -29,9 +28,7 @@ export const userSlice = createSlice({
       value.currentUser = current;
     },
     updatePassword: ({ value }, { payload }) => {
-      const { index, current } = payload;
-      value.allUsers[index] = current;
-      value.currentUser = current;
+      value.password = payload;
     },
   },
 });

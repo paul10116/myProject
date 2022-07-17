@@ -78,3 +78,9 @@
   justify-content: center;
   height: 10rem;
 }
+
+.errorPage {
+  margin: 4rem;
+  text-align: center;
+  color: red;
+}

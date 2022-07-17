@@ -1,29 +1,10 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
-import UserProfile from "./UserProfile";
+import { useSelector } from "react-redux/es/exports";
 
-const UsersPage = ({ user }) => {
-  const navigate = useNavigate();
-  const profileUser = user;
-  const id = user.id;
-  console.log(id);
+const UsersPage = () => {
+  const allUsers = useSelector((state) => state.user.value.allUsers);
 
-  function profileNav() {
-    <UserProfile user={profileUser} />;
-    navigate("/user/" + id);
-  }
-
-  return (
-    <div className="userCard" onClick={profileNav}>
-      <div className="image">
-        <img src={user.image} alt="ocean" />
-      </div>
-      <div>
-        <h5>Surname: {user.username}</h5>
-        <h5>User role: admin</h5>
-      </div>
-    </div>
-  );
+  return <div className="usersPage">All user's page</div>;
 };
 
 export default UsersPage;
